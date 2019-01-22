@@ -2,7 +2,7 @@
 using System.Globalization;
 namespace ConsoleApplication1.Classes
 {
-    public class DateConverter
+    public class DatesConverter
     {
         #region/سازنده كلاس تبديل تاريخ
         /// <summary>
@@ -11,7 +11,7 @@ namespace ConsoleApplication1.Classes
         /// <param name="سال"></param>
         /// <param name="ماه"></param>
         /// <param name="روز"></param>
-        public DateConverter(int year,int month,int day)
+        public DatesConverter(int year, int month, int day)
         {
             Year = year;
             Month = month;
@@ -43,7 +43,7 @@ namespace ConsoleApplication1.Classes
         public void MiladiToShamsi()
         {
             PersianCalendar pc = new PersianCalendar();
-            DateTime dt = new DateTime(year:Year,month:Month,day:Day);
+            DateTime dt = new DateTime(year: Year, month: Month, day: Day);
             string result =
                 $"Miladi To Shamsi:{ pc.GetYear(dt).ToString("0000/") } { pc.GetMonth(dt).ToString("00/") } { pc.GetDayOfMonth(dt).ToString("00") }";
             System.Console.Write(result);
